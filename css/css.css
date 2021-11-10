@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: darkgray;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /*main axis*/
+    justify-content: center;
+    /*cross axis*/
+    align-items: stretch;
+    border: 1px solid black;
+    position: relative;
+}
+
+.item {
+    /*flex: flex-grow flex-shrink flex-basis*/
+    flex: 1;
+}
+
+#first {
+    background-color: #ECCFC3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#second {
+    background: rgb(149, 125, 144);
+    background: linear-gradient(180deg, rgba(149, 125, 144, 1) 84%, rgba(246, 237, 237, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#aaa {
+    width: 600px;
+
+}
+
+
+.card {
+    width: 50%;
+    height: 50%;
+    background-color: #E49AB0;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 5px grey;
+}
+
+#pic {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.puppies {
+    background-color: #ECB8A5;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 200px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+
+#media {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+ol li {
+    text-align: center;
+    margin: auto;
+    width: 30px;
+}
+
+#query {
+    width: 90%;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 6px 18px;
+}
+
+#button {
+    width: 90%;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 6px 18px;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #first {
+        order: 2;
+    }
+
+    #second {
+        order: 1;
+    }
+}
